@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 // import Pills from './TopButtons'
 import { Link, Outlet, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+// import'./StudentProfile.css';
 export default function StudentProfile() {
   const [students,setStudents] = useState([])
   const navigate=useNavigate()
@@ -59,12 +60,12 @@ export default function StudentProfile() {
                         <td>{students.fName+" "+students.lName}</td>
                     </tr>
                     <tr>
-                        <td>class</td>
-                        <td>{students.clss}</td>
+                        <td>Semester</td>
+                        <td>{students.semName}</td>
                     </tr>
                     <tr>
-                        <td>sec</td>
-                        <td>{students.section}</td>
+                        <td>Branch</td>
+                        <td>{students.streamName}</td>
                     </tr>
                     <tr>
                         <td>email</td>

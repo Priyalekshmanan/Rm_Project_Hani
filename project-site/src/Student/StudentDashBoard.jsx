@@ -39,24 +39,32 @@ export default function DashBoard() {
               </a>
               <ul class="collapse" id="billing-submenu">
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#">Result</a>
+                  {/* <a class="nav-link text-white" href="#">Result</a> */}
+                  <Link to="exam" className="nav-link text-white collapsed ">
+                <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                  <i class="material-icons opacity-10">book</i>
+                </div>
+                <span class="nav-link-text ms-1">Result</span>
+              </Link>
                 </li>
               </ul>
           </div>
-          <div class="nav-item">
-              <a class="nav-link text-white collapsed" href="../pages/billing.html" data-bs-toggle="collapse" data-bs-target="#user-submenu" aria-expanded="false" aria-controls="user-submenu">
+          <li class="nav-item">
+          {/* <a class="nav-link text-white active bg-gradient-primary" > */}
+              <Link to="attendance" className="nav-link text-white collapsed ">
                 <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                   <i class="material-icons opacity-10">book</i>
                 </div>
                 <span class="nav-link-text ms-1">Attendance</span>
-              </a>
+              </Link>
+              {/* </a> */}
               
-          </div>
+          </li>
            
           
             <li class="nav-item">
               <a class="nav-link text-white " href="../pages/notifications.html">
-                <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <div class="text-white text-center me-2 d-flex align-items-center justify-content-right">
                   <i class="material-icons opacity-10">notifications</i>
                 </div>
                 <span class="nav-link-text ms-1">Notifications</span>

@@ -26,7 +26,9 @@ export default function DisplayStudentAttendace() {
         
     
   return (
-    <div>DisplayStuAttbysdNed
+    
+    <div className='main-content position-relative max-height-vh-100 h-100 border-radius-lg' >DisplayAllStudent
+        <div className="text-centre">
     <table>
         <tr>
         <td>
@@ -53,7 +55,7 @@ export default function DisplayStudentAttendace() {
                 
                 </tr>
             </thead>
-            <tbody>
+            <tbody  >
                
                  {
                     dis.map((item)=>{
@@ -70,7 +72,10 @@ export default function DisplayStudentAttendace() {
                     })
                  }
             </tbody>
+        
         </table>
+        </div>
+
     </div>
   )
   }

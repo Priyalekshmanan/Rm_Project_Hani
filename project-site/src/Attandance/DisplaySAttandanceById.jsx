@@ -4,15 +4,17 @@ import React, { useEffect, useState } from 'react'
 // import { useNavigate } from 'react-router-dom'
 
 export default function DisplayStudentAttendaceById() {
-        const[sid,setSid]=useState("")
+    let stid=sessionStorage.getItem("sid")
+        // const[sid,setSid]=useState("")
         const [sstartdate, setSstartdate] = useState("")
         const [senddate, setSenddate] = useState(0)
         const[dis,setDis]=useState([])
         // const navigate=useNavigate()
 
         function DisplayAllStuById(){
+           
             axios
-            .get("http://localhost:5099/api/DisplayAttendance/SAttendance"+sid+"/"+sstartdate+"/"+senddate)
+            .get("http://localhost:5099/api/DisplayAttendance/SAttendance"+stid+"/"+sstartdate+"/"+senddate)
             .then((response)=>{
             console.log(response.data);
             setDis(response.data)
@@ -20,19 +22,16 @@ export default function DisplayStudentAttendaceById() {
         .catch((e)=>{
             console.log(e)
         })
-           
+  
        }
-            
-        
-    
   return (
-    <div>DisplayStuAttbysdNed
+    <div className='main-content position-relative max-height-vh-100 h-100 border-radius-lg'>Display Attendance Of Student
     <table>
         <tr>
         <td>
-             <input type='text' placeholder='Student Id' value={sid} onChange={(e)=>setSid(e.target.value)}/>  
-            <input type='text' placeholder='Start Date' value={sstartdate} onChange={(e)=>setSstartdate(e.target.value)}/>
-            <input type='text' placeholder='End Date' value={senddate} onChange={(e)=>setSenddate(e.target.value)}/>
+               
+            <input type='date' placeholder='Start Date' value={sstartdate} onChange={(e)=>setSstartdate(e.target.value)}/>
+            <input type='date' placeholder='End Date' value={senddate} onChange={(e)=>setSenddate(e.target.value)}/>
         </td>
         </tr>
         <tr>

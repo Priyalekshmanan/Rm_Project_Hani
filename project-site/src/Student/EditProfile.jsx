@@ -1,10 +1,12 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import './EditProfile.css';
 
 export default function EditProfile() {
     const [email, setEmail] = useState("")
     const [phone, setPhone] = useState("")
 function Edit(){
+   
     let std={
         
         eMail: email,
@@ -16,9 +18,12 @@ function Edit(){
     .then((res)=>{
         console.log(res.data);
     })
+    .catch((error) => {
+        console.error("Error editing profile:", error);
+    });
 }
   return (
-    <div>
+    <div className="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
         <h1>Edit Profile</h1>
         <table>
             <tbody>

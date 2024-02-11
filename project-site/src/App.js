@@ -14,7 +14,9 @@ import TeacherProfile from './Teacher/TeacherProfile';
 import ViewResult from './Result/ViewResult';
 import AddResult from './Result/AddResult';
 import StudentProfile from './Student/StudentProfile';
-import EditProfile from './Student/EditProfile'
+import EditProfile from './Student/EditProfile';
+import DisplayStudentAttendaceById from './Attandance/DisplaySAttandanceById';
+import DisplayTeacherAttendace from './Attandance/DisplayAllTchrAttndance';
 function App() {
   return (
     
@@ -39,12 +41,16 @@ function App() {
           <Route path="Student-Dashboard" element={<StudentDashboard />}>
           <Route index element={<StudentProfile />} />
           <Route path="student-profile/edit-profile" element={<EditProfile />} />
+          <Route path="attendance" element={<DisplayStudentAttendaceById/>} />
+          <Route path="exam" element={<ViewResult/>}/>
         </Route>
 
           <Route path="teacher-dashboard" element={<TeacherDashboard />}>
             <Route path='profile' element={<TeacherProfile/>}/>
             <Route path='view-result' element={<ViewResult/>}/>
             <Route path='add-result' element={<AddResult/>}/>
+            <Route path='viewteacher_attendance' element={<DisplayTeacherAttendace/>}/>
+            {/* <Route path='view-attendance' element={<Display} */}
 
             {/* <Route path="schedule-exam" element={<ScheduleExam />} />
             <Route path="get-marks" element={<GetMarks />} /> */}

@@ -5,7 +5,7 @@ export default function DashBoard() {
     const navigate = useNavigate();
 
     return (
-        <div>
+        <div >
             <aside className="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark" id="sidenav-main">
                 <div className="sidenav-header">
                     <i className="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
@@ -47,17 +47,23 @@ export default function DashBoard() {
                                 <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                                     <i className="material-icons opacity-10">book</i>
                                 </div>
-                                <span className="nav-link-text ms-1">Registration</span>
+                                <span className="nav-link-text ms-1">Attendance</span>
                             </a>
                             <ul className="collapse" id="registration-submenu">
                                 <li className="nav-item">
-                                    <a className="nav-link text-white" href="#">Register to NEXUSLIVE</a>
+                                    <a className="nav-link text-white" href="#"> Student Attendance </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link text-white" href="#">My Details</a>
+                                    {/* <a className="nav-link text-white" href="#">View Teacher Attendance</a> */}
+                                    <Link to="viewteacher_attendance" className="nav-link text-white collapsed ">
+                                        <div class="text-white text-center d-flex align-items-center justify-content-center">
+                                    
+                                        </div>
+                                        <span class="nav-link-text ms-1">View Teacher Attendance</span>
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link text-white" href="#">Edit Profile</a>
+                                    <a className="nav-link text-white" href="#">View Attendance Record</a>
                                 </li>
                             </ul>
                         </li>

@@ -1,0 +1,73 @@
+
+.student-profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* //Profile */
+  .profile-info-container {
+    text-align: center;
+  }
+  
+
+  .profile-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+
+  .form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+/* row */
+  .profile-table {
+    width: 100%;
+  }
+
+  .profile-table tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Table Cell  */
+  .profile-table td {
+    padding: 10px 0;
+  }
+  
+  /* Error Message  */
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+  
+  /* Submit Button  */
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Edit Details Button */
+  .edit-details-button {
+    background-color: #28a745;
+  }
+  
+  .edit-details-button:hover {
+    background-color: #218838;
+  }
+  
